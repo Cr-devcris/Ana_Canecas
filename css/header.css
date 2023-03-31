@@ -5,51 +5,96 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body{
-    font-size: 16px;
-    height: 40px;
-    justify-content: center;
-    background-color: rgb(217, 71, 57);
+header{
+    background-color: rgb(244, 174, 174);
+    display: flex;
+    padding: 15px;
+    max-height: 70px;    
 }
 
-h2{
-    color: transparent;
-    font-size: 15vw;
+.logo img {
+    max-width: 20px;
+    margin-left: 15px;
+    margin-top: -44px;
 }
-h1 span{
-    animation: animate 3s linear infinite;
-    animation-delay: calc(0.1s * var(--i));
+
+.logo-text{
+    font-size: 8px;
+    background: rgb(15, 24, 153);
+        background: linear-gradient(90deg, rgba(15, 24, 153, 1) 0%, rgba(193, 23, 66, 1) 49%, rgb(209, 41, 122) 100%);
+        background-clip: text; 
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
-@keyframes animate
-{
-    0%
-    {
-        color: #140808;
-        filter: blur(2px) hue-rotate(0deg);
-        text-shadow: 0 0 10px #00b3ff,
-        0 0 20px #00b3ff,
-        0 0 40px #00b3ff,
-        0 0 80px #00b3ff,
-        0 0 20px #00b3ff,
-        0 0 20px #00b3ff,
-        0 0 10px #00b3ff,
-        0 0 10px #00b3ff;
-    }
-    30%,70%
-    {
-        color: #140909;
-        filter: blur(2px) hue-rotate(360deg);
-        text-shadow: 0 0 10px #00b3ff,
-        0 0 20px #00b3ff,
-        0 0 40px #00b3ff,
-        0 0 80px #00b3ff,
-        0 0 120px #00b3ff,
-        0 0 200px #00b3ff,
-    }
-    100%
-    {
-        color: transparent;
-        box-shadow: none;
-        filter: blur(2px) hue-rotate(0deg);
-    }
+
+.menu ul{
+    display: inline-flex;
+    list-style: none;
+    margin-top: -44px;
+    margin-left: 55px;
+}
+.menu ul li{
+    width: 80px;
+    margin: 25px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.submenu1{
+    display: none;
+}
+
+nav ul li:hover .submenu1{
+    display: block;
+    position: absolute;
+    background-color: red;
+    margin-top: 8px;
+    margin-left: 12px;
+}
+
+nav ul li:hover .submenu1 ul{
+    display: block;
+}
+
+nav ul li:hover .submenu1 ul li{
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+nav ul li:hover .submenu1 ul li:hover{
+    background-color: yellow;
+}
+
+.submenu2 {
+    display: none;
+}
+
+nav ul li:hover .submenu2 {
+    display: block;
+    position: absolute;
+    background-color: red;
+    margin-top: 15px;
+    margin-left: -38px;
+}
+
+nav ul li:hover .submenu2 ul {
+    display: block;
+}
+
+nav ul li:hover .submenu2 ul li {
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+nav ul li:hover .submenu2 ul li:hover {
+    background-color: yellow;
 }
